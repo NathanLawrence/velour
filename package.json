@@ -1,0 +1,25 @@
+{
+  "name": "velour",
+  "version": "0.0.1",
+  "description": "A super-easy CSS framework for luxurious JavaScript-free animations.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanLawrence/velour.git"
+  },
+  "author": "nathan@nathanlawrence.org",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/NathanLawrence/velour/issues"
+  },
+  "homepage": "https://github.com/NathanLawrence/velour#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-less": "^3.0.5"
+  }
+}
