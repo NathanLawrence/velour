@@ -18,4 +18,3 @@ Copy all the files from components/less to your Bootstrap LESS directory and add
 // For Velour includes, see the 'velour.less' file.
 @import "velour.less";
 ```
-
