@@ -1,0 +1,22 @@
+@keyframes fadeIn {
+	from { opacity : 0; }
+	to { opacity : 1; }
+}
+
+.fade-in-page-load(@time, @delay){
+	opacity : 0;
+
+	// Animations
+   animation:fadeIn ease-in 1;
+   animation-fill-mode:forwards;
+
+   // Animation Timing
+   animation-duration:@time;
+
+   // Animation Delay
+   animation-delay:@delay;
+}
+
+.fade-in-page-load-1{
+   .fade-in-page-load(1,0);
+}
