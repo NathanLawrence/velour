@@ -1,0 +1,33 @@
+@keyframes fadeIn {
+	from { opacity : 0; }
+	to { opacity : 1; }
+}
+
+
+@mixin fade-in-page-load($time, $delay){
+	opacity : 0;
+
+	// Animations
+   animation:fadeIn ease-in 1;
+   animation-fill-mode:forwards;
+
+   // Animation Timing
+   animation-duration: unit($time, s);
+
+   // Animation Delay
+   animation-delay: unit($delay, s);
+}
+
+
+
+
+//Generators can be a little tough to read, but think of this as a recursive function.
+@include generate-fade-in-load(10, 5);
+
+@mixin generate-fade-in-load($numlimit, $delaylimit, $i: 1) when ($i =< $numlimit){
+   //Naming the new class using concatenation
+   .fade-in-page-load-#{$i}{
+      @include fade-in-page-load($i,0); //Calling the mixin we wrote above
+   }
+   @include generate-fade-in-load($numlimit, $delaylimit, ($i+1)); //The actual recursive part
+}
