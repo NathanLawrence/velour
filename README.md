@@ -20,3 +20,7 @@ Copy all the files from components/less to your Bootstrap LESS directory and add
 ```
 
 Since these are animations, make sure you build with an autoprefixer turned on. Most LESS build tools either have one built in or that can be installed separately.
+
+## About the SCSS Version
+
+To maximize compatibility with Bootstrap, Velour is written in LESS. However, as a service to those who may not enjoy LESS as much as the alternatives, the build process for Velour includes SCSS conversion, so you can use it however you like. Please note that unlike the LESS, SCSS code committed to the master branch is *not* tested, so you should proceed at your own risk.
