@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	shell = require('gulp-shell'),
 	autoprefixer = require('gulp-autoprefixer'),
 	cleanCSS = require('gulp-clean-css'),
-	rename = require('gulp-rename');
+	rename = require('gulp-rename'),
+	lessToScss = require('gulp-less-to-scss');
 
 gulp.task('test', function(){
 	gutil.log('This is a test.');
@@ -30,4 +31,10 @@ gulp.task('minify', function(){
 		suffix:'.min'
 	}))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('scss', function(){
+	 gulp.src('components/less/*.less')
+		.pipe(lessToScss())
+		.pipe(gulp.dest('components/scss'));
 });
