@@ -3,6 +3,7 @@
 	to { opacity : 1; }
 }
 
+
 .fade-in-page-load(@time, @delay){
 	opacity : 0;
 
@@ -11,12 +12,21 @@
    animation-fill-mode:forwards;
 
    // Animation Timing
-   animation-duration:@time;
+   animation-duration: unit(@time, s);
 
    // Animation Delay
-   animation-delay:@delay;
+   animation-delay: unit(@delay, s);
 }
 
-.fade-in-page-load-1{
-   .fade-in-page-load(1,0);
+
+
+
+//Generators can be a little tough to read, but think of this as a recursive function.
+.generate-fade-in-load(10, 5);
+
+.generate-fade-in-load(@numlimit, @delaylimit, @i: 1) when (@i =< @numlimit){
+   .fade-in-page-load-@{i}{
+      .fade-in-page-load(@i,0);
+   }
+   .generate-fade-in-load(@numlimit, @delaylimit, (@i+1));
 }
