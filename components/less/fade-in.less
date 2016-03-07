@@ -25,8 +25,9 @@
 .generate-fade-in-load(10, 5);
 
 .generate-fade-in-load(@numlimit, @delaylimit, @i: 1) when (@i =< @numlimit){
+   //Naming the new class using concatenation
    .fade-in-page-load-@{i}{
-      .fade-in-page-load(@i,0);
+      .fade-in-page-load(@i,0); //Calling the mixin we wrote above
    }
-   .generate-fade-in-load(@numlimit, @delaylimit, (@i+1));
+   .generate-fade-in-load(@numlimit, @delaylimit, (@i+1)); //The actual recursive part
 }
