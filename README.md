@@ -3,7 +3,7 @@ A super-easy CSS framework for luxurious JavaScript-free animations.
 
 ## To Use
 
-Download velour.css or velour.min.css and include it with your project's css:
+Download velour.css or velour.min.css and include it with your project's CSS:
 
 ```html
 <link rel="stylesheet" type="text/css" href="path/to/velour.min.css">
