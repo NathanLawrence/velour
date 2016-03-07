@@ -3,7 +3,6 @@
  * Copyright 2016 Nathan Lawrence
  * Licensed under BSD-2-Clause
  */
-@sec = "s";
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
