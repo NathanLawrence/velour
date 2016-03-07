@@ -18,3 +18,5 @@ Copy all the files from components/less to your Bootstrap LESS directory and add
 // For Velour includes, see the 'velour.less' file.
 @import "velour.less";
 ```
+
+Since these are animations, make sure you build with an autoprefixer turned on. Most LESS build tools either have one built in or that can be installed separately.
